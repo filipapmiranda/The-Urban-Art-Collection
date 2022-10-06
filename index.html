@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./general.css">
+    <title>The Urban Art Collection</title>
+</head>
+
+<body>
+    <header>
+        <div class="container-header">
+            <img src="logo_full.png" alt="The Urban Art Collection logo" id="top-logo" width="280vw">
+            <nav>
+                <ul class="navBar_items">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Art_Map.html">Art Map</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="intro">
+            <p> Most walls persist throughout time, however the art on them does not.
+                Before such art perishes, we have documented it. The result is an Urban Art collection that has
+                been growing since 2014 and that has transitioned into its digital era. Here you can find such
+                collection distributed geographically. So get ready to explore!
+            </p>
+        </div>
+        <div class="art_button">
+            <a href="./Art_Map.html">
+                <button class="blob-btn" type="button">
+                    Explore the Art Map
+                    <span class="blob-btn__inner">
+                        <span class="blob-btn__blobs">
+                            <span class="blob-btn__blob"></span>
+                            <span class="blob-btn__blob"></span>
+                            <span class="blob-btn__blob"></span>
+                            <span class="blob-btn__blob"></span>
+                        </span>
+                    </span>
+                </button>
+                <br />
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+                                result="goo"></feColorMatrix>
+                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="container-footer">
+            <div class="bottom_logo">
+                <img src="logo_full.png" alt="The Urban Art Collection logo" width="200vw">
+            </div>
+            <div class="Contact">
+                <h4>Contact us:</h4>
+                <p>filipapmiranda@gmail.com</p>
+            </div>
+            <div class="Author">
+                <p>Made by Filipa Miranda for Code First Girls</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

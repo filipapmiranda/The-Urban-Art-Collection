@@ -1,0 +1,144 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url(./background_blob.svg);
+    background-size:cover;
+    min-height: 800px;
+    font-family: 'Aharoni', sans-serif;
+    height: auto;
+    width: auto;
+    background-position:center;
+}
+
+.container-header{
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    width:auto;
+    margin-top: 1.5%;
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    padding:0.5em 1.5em;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+ul.navBar_items a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul.navBar_items a::before {
+    
+    opacity: 70%;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+    display: block;
+    width: 20px;
+    border-bottom: 2px solid;
+    margin: 0 auto;   
+}
+
+ul.navBar_items a:hover::before{
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    margin: auto;
+  }
+  
+footer{
+    color: white;
+}
+
+.container-footer{
+	margin-bottom:0;
+    margin-right: 1%;
+    margin-left: 1%;
+	height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+	grid-template-rows: auto;
+    align-content: center;
+    align-items: center;
+    grid-template-areas:
+    "a b b b b b b b b b b b b b b b b b b b b b b b d d d d";
+}
+
+
+.bottom_logo{
+    grid-area: a;  
+}
+.Contact{
+    grid-area: b;
+}
+
+.Author{
+    grid-area: d;
+    align-self: end;
+    justify-self: end;
+    margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+ 
+    .container-footer{
+        margin-bottom:0;
+        margin-right: 1%;
+        margin-left: 1%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        align-content: center;
+        align-items: center;
+        grid-template-areas:
+        "a b"
+        "c c";
+    }
+    
+    .bottom_logo{
+        grid-area: a;  
+    }
+    .Contact{
+        grid-area: b;
+        align-self: center;
+        justify-self:end;
+        margin-right: 2%;
+
+    }
+
+    .Author{
+        grid-area: c;
+        align-self: center;
+        justify-self:start;
+        margin-top: 2%;
+        margin-left: 0.5cm;
+    }
+
+    main{
+        width: 80vw; 
+        padding-top: 10%;
+        padding-bottom: 10%;
+      }
+}
